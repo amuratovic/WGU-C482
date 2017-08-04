@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainScreenController">
+<children>
+      <Label fx:id="MainTitleLabel" layoutX="14.0" layoutY="14.0" text="Inventory Management System">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="MainExitButton" layoutX="922.0" layoutY="453.0" mnemonicParsing="false" onAction="#MainExitClick" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: DarkGrey;" text="Exit" />
+      <AnchorPane layoutY="50.0" prefHeight="400.0" prefWidth="499.0">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" text="Parts">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="MainAddPartsButton" layoutX="318.0" layoutY="361.0" mnemonicParsing="false" onAction="#MainAddPartsClick" text="Add" />
+            <Button layoutX="366.0" layoutY="361.0" mnemonicParsing="false" onAction="#MainModifyPartsClick" text="Modify" />
+            <Button layoutX="429.0" layoutY="361.0" mnemonicParsing="false" onAction="#MainDeletePartsClick" text="Delete" />
+            <Button layoutX="208.0" layoutY="13.0" mnemonicParsing="false" onAction="#MainPartsSearchBtn" text="Search" />
+            <TextField fx:id="MainPartsSearchField" layoutX="270.0" layoutY="13.0" promptText="Search Parts" />
+            <TableView fx:id="MainPartsTableView" layoutX="20.0" layoutY="50.0" prefHeight="300.0" prefWidth="460.0">
+              <columns>
+                <TableColumn fx:id="MainPartIDCol" prefWidth="115.0" text="Part ID" />
+                <TableColumn fx:id="MainPartNameCol" prefWidth="115.0" text="Part Name" />
+                  <TableColumn fx:id="MainPartInvCol" prefWidth="115.0" text="Inv Level" />
+                  <TableColumn fx:id="MainPartPriceCol" prefWidth="115.0" text="Price Per Unit" />
+              </columns>
+            </TableView>
+            <Button layoutX="429.0" layoutY="13.0" mnemonicParsing="false" onAction="#ClearSearchParts" text="Clear" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="500.0" layoutY="50.0" prefHeight="400.0" prefWidth="500.0">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" text="Products">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="MainAddProductsButton" layoutX="317.0" layoutY="361.0" mnemonicParsing="false" onAction="#MainAddProductsClick" text="Add" />
+            <Button layoutX="365.0" layoutY="361.0" mnemonicParsing="false" onAction="#MainModifyProductsClick" text="Modify" />
+            <Button layoutX="429.0" layoutY="361.0" mnemonicParsing="false" onAction="#MainDeleteProductsClick" text="Delete" />
+            <Button layoutX="216.0" layoutY="13.0" mnemonicParsing="false" onAction="#MainSearchProductsBtn" text="Search" />
+            <TextField fx:id="MainProductsSearchField" layoutX="278.0" layoutY="13.0" promptText="Search Products" />
+            <TableView fx:id="MainProductsTableView" layoutX="20.0" layoutY="50.0" prefHeight="300.0" prefWidth="460.0">
+               <columns>
+                  <TableColumn fx:id="MainProductIDCol" prefWidth="115.0" text="Product ID" />
+                  <TableColumn fx:id="MainProductNameCol" prefWidth="115.0" text="Product Name" />
+                  <TableColumn fx:id="MainProductInvCol" prefWidth="115.0" text="Inv Level" />
+                  <TableColumn fx:id="MainProductPriceCol" prefWidth="115.0" text="Price Per Unit" />
+               </columns>
+            </TableView>
+            <Button layoutX="437.0" layoutY="13.0" mnemonicParsing="false" onAction="#ClearSearchProducts" text="Clear" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

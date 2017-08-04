@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddPartsController">
+<children>
+      <Label layoutX="14.0" layoutY="13.0" text="Add Part">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="AddPartInHouseRadioBtn" layoutX="122.0" layoutY="18.0" mnemonicParsing="false" onAction="#AddPartsInHouseRadio" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="rdbGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="AddPartOutsourcedRadioBtn" layoutX="216.0" layoutY="18.0" mnemonicParsing="false" onAction="#AddPartsOutsourcedRadio" text="Outsourced" toggleGroup="$rdbGroup" />
+      <Label layoutX="15.0" layoutY="71.0" text="ID" />
+      <Label layoutX="15.0" layoutY="107.0" text="Name" />
+      <Label layoutX="15.0" layoutY="143.0" text="Inv" />
+      <Label layoutX="15.0" layoutY="179.0" text="Price/Cost" />
+      <Label layoutX="15.0" layoutY="215.0" text="Min" />
+      <Label layoutX="15.0" layoutY="251.0" text="Max" />
+      <Label fx:id="DynAddPartLabel" layoutX="15.0" layoutY="287.0" text="Machine ID" />
+      <TextField fx:id="AddPartsIDField" disable="true" editable="false" layoutX="118.0" layoutY="67.0" promptText="ID" />
+      <TextField fx:id="AddPartsNameField" layoutX="118.0" layoutY="103.0" promptText="Name" />
+      <TextField fx:id="AddPartsInvField" layoutX="118.0" layoutY="139.0" promptText="Inventory" />
+      <TextField fx:id="AddPartsPriceField" layoutX="118.0" layoutY="175.0" promptText="Price/Cost" />
+      <TextField fx:id="AddPartsMinField" layoutX="118.0" layoutY="211.0" promptText="Minimum Inventory" />
+      <TextField fx:id="AddPartsMaxField" layoutX="118.0" layoutY="247.0" promptText="Maximum Inventory" />
+      <TextField fx:id="AddPartsDynField" layoutX="118.0" layoutY="283.0" />
+      <Button layoutX="202.0" layoutY="322.0" mnemonicParsing="false" onAction="#AddPartsSaveClicked" style="-fx-background-color: DarkGrey;" text="Save" />
+      <Button layoutX="258.0" layoutY="322.0" mnemonicParsing="false" onAction="#AddPartsCancelClicked" style="-fx-background-color: DarkGrey;" text="Cancel" />
+   </children>
+</AnchorPane>
